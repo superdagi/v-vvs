@@ -127,7 +127,7 @@ const goToBusiness = () => {
   flex: 1;
   display: flex;
   align-items: center;
-  min-height: 70vh;
+  min-height: 45vh;
   color: var(--white);
 }
 
