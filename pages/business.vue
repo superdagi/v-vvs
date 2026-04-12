@@ -7,40 +7,23 @@
           <div class="row items-center">
             <div class="col-12 col-md-6">
               <h1 class="hero-title">
-                Professional VVS Solutions
+                Profesjonelle VVS-løsninger
               </h1>
               <h2 class="hero-subtitle">
-                Expert plumbing, heating, and ventilation services
+                Ekspert på rørleggerjenester for bolig og næring i offentlig og privat sektor
               </h2>
               <p class="hero-description">
-                With over 20 years of experience, we provide reliable and efficient 
-                VVS solutions for both residential and commercial properties.
+                Med over 20 års erfaring tilbyr vi pålitelige og effektive 
+                VVS-løsninger for både bolig- og næringseiendommer.
               </p>
-              <div class="hero-actions">
-                <q-btn
-                  unelevated
-                  size="lg"
-                  color="primary"
-                  label="Get Quote"
-                  class="q-mr-md"
-                  @click="scrollToContact"
-                />
-                <q-btn
-                  outline
-                  size="lg"
-                  color="primary"
-                  label="Our Services"
-                  @click="scrollToServices"
-                />
-              </div>
+           
             </div>
             <div class="col-12 col-md-6">
               <div class="hero-image">
-                <q-img
-                  src="/api/placeholder/600/400"
-                  alt="VVS Professional at work"
-                  class="rounded-borders"
-                  ratio="3/2"
+                <img
+                  src="https://picsum.photos/600/400?random=1"
+                  alt="VVS-fagperson på jobb"
+                  class="rounded-borders hero-img"
                 />
               </div>
             </div>
@@ -52,33 +35,33 @@
     <!-- Features Section -->
     <section class="features-section">
       <div class="container">
-        <div class="row q-gutter-lg justify-center">
+        <div class="row justify-center">
           <div class="col-12 col-md-3">
-            <q-card class="feature-card text-center">
-              <q-card-section>
-                <q-icon name="schedule" size="3rem" color="primary" />
-                <h3>24/7 Emergency</h3>
-                <p>Round-the-clock emergency services for urgent VVS issues</p>
-              </q-card-section>
-            </q-card>
+            <div class="feature-card text-center">
+              <div class="feature-content">
+                <i class="material-icons feature-icon">schedule</i>
+                <h3>24/7 akutt</h3>
+                <p>Døgnkontinuerlig beredskap for akutte VVS-problemer</p>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-md-3">
-            <q-card class="feature-card text-center">
-              <q-card-section>
-                <q-icon name="verified" size="3rem" color="primary" />
-                <h3>Certified Experts</h3>
-                <p>Licensed and certified professionals with extensive experience</p>
-              </q-card-section>
-            </q-card>
+            <div class="feature-card text-center">
+              <div class="feature-content">
+                <i class="material-icons feature-icon">verified</i>
+                <h3>Sertifiserte eksperter</h3>
+                <p>Autoriserte og sertifiserte fagfolk med omfattende erfaring</p>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-md-3">
-            <q-card class="feature-card text-center">
-              <q-card-section>
-                <q-icon name="guarantee" size="3rem" color="primary" />
-                <h3>Quality Guarantee</h3>
-                <p>All work comes with comprehensive warranty and quality assurance</p>
-              </q-card-section>
-            </q-card>
+            <div class="feature-card text-center">
+              <div class="feature-content">
+                <i class="material-icons feature-icon">verified_user</i>
+                <h3>Kvalitetsgaranti</h3>
+                <p>Alt arbeid kommer med omfattende garanti og kvalitetssikring</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -88,29 +71,26 @@
     <section id="services" class="services-section">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="section-title">Our Services</h2>
+          <h2 class="section-title">Våre tjenester</h2>
           <p class="section-subtitle">
-            Comprehensive VVS solutions for all your needs
+            Omfattende VVS-løsninger for alle dine behov
           </p>
         </div>
         
-        <div class="row q-gutter-lg">
-          <div class="col-12 col-md-6 col-lg-4" v-for="service in services" :key="service.id">
-            <q-card class="service-card full-height">
-              <q-img
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 q-mb-lg" v-for="service in services" :key="service.id">
+            <div class="service-card  ">
+              <img
                 :src="service.image"
                 :alt="service.title"
-                height="200px"
                 class="service-image"
               />
-              <q-card-section>
+              <div class="service-content">
                 <h3 class="service-title">{{ service.title }}</h3>
                 <p class="service-description">{{ service.description }}</p>
-              </q-card-section>
-              <q-card-actions align="right">
-                <q-btn flat color="primary" label="Learn More" />
-              </q-card-actions>
-            </q-card>
+             
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -122,33 +102,33 @@
         <div class="row items-center">
           <div class="col-12 col-md-6">
             <div class="about-content">
-              <h2 class="section-title">About V-VVS</h2>
+              <h2 class="section-title">Om Vesterålen VVS</h2>
               <p class="about-text">
-                Established in 2004, V-VVS has been serving the community with 
-                professional plumbing, heating, and ventilation services. Our team 
-                of certified experts is committed to delivering high-quality solutions 
-                that meet the highest industry standards.
+                Etablert i 2026, har Vesterålen VVS som mål å betjene lokalsamfunnet med 
+                profesjonelle rørleggertjenester. Vårt team 
+                av sertifiserte eksperter er forpliktet til å levere løsninger av høy kvalitet 
+                som oppfyller de høyeste industristandardene.
               </p>
               <div class="stats-grid">
                 <div class="stat-item">
                   <div class="stat-number">500+</div>
-                  <div class="stat-label">Projects Completed</div>
+                  <div class="stat-label">Prosjekter fullført</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-number">20+</div>
-                  <div class="stat-label">Years Experience</div>
+                  <div class="stat-label">Års erfaring</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-number">98%</div>
-                  <div class="stat-label">Customer Satisfaction</div>
+                  <div class="stat-label">Kundetilfredshet</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <q-img
-              src="/api/placeholder/500/400"
-              alt="Our professional team"
+            <img
+              src="https://picsum.photos/500/400?random=7"
+              alt="Vårt profesjonelle team"
               class="rounded-borders about-image"
             />
           </div>
@@ -157,107 +137,121 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section v-if="false" id="contact" class="contact-section">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="section-title text-white">Get In Touch</h2>
+          <h2 class="section-title text-white">Kom i kontakt</h2>
           <p class="section-subtitle text-white">
-            Ready to start your next VVS project? Contact us today!
+            Klar til å starte ditt neste VVS-prosjekt? Kontakt oss i dag!
           </p>
         </div>
         
-        <div class="row q-gutter-lg">
+        <div  class="row">
           <div class="col-12 col-md-6">
-            <q-card class="contact-info-card">
-              <q-card-section>
-                <h3>Contact Information</h3>
+            <div class="contact-info-card">
+              <div class="card-content">
+                <h3>Kontaktinformasjon</h3>
                 <div class="contact-item">
-                  <q-icon name="phone" color="primary" size="1.5rem" />
+                  <i class="material-icons contact-icon">phone</i>
                   <div>
-                    <strong>Phone:</strong><br>
+                    <strong>Telefon:</strong><br>
                     +47 123 45 678
                   </div>
                 </div>
                 <div class="contact-item">
-                  <q-icon name="email" color="primary" size="1.5rem" />
+                  <i class="material-icons contact-icon">email</i>
                   <div>
-                    <strong>Email:</strong><br>
+                    <strong>E-post:</strong><br>
                     kontakt@v-vvs.no
                   </div>
                 </div>
                 <div class="contact-item">
-                  <q-icon name="location_on" color="primary" size="1.5rem" />
+                  <i class="material-icons contact-icon">location_on</i>
                   <div>
-                    <strong>Address:</strong><br>
+                    <strong>Adresse:</strong><br>
                     Eksempelveien 123<br>
                     0123 Oslo, Norway
                   </div>
                 </div>
                 <div class="contact-item">
-                  <q-icon name="access_time" color="primary" size="1.5rem" />
+                  <i class="material-icons contact-icon">access_time</i>
                   <div>
-                    <strong>Business Hours:</strong><br>
-                    Mon-Fri: 08:00 - 16:00<br>
-                    Emergency: 24/7
+                    <strong>Åpningstider:</strong><br>
+                    Man-Fre: 08:00 - 16:00<br>
+                    Akutt: 24/7
                   </div>
                 </div>
-              </q-card-section>
-            </q-card>
+              </div>
+            </div>
           </div>
           
           <div class="col-12 col-md-6">
-            <q-card class="contact-form-card">
-              <q-card-section>
-                <h3>Send us a message</h3>
-                <q-form @submit="submitForm" class="contact-form">
-                  <q-input
-                    v-model="form.name"
-                    label="Full Name"
-                    outlined
-                    class="q-mb-md"
-                    :rules="[val => !!val || 'Name is required']"
-                  />
-                  <q-input
-                    v-model="form.email"
-                    label="Email"
-                    type="email"
-                    outlined
-                    class="q-mb-md"
-                    :rules="[val => !!val || 'Email is required']"
-                  />
-                  <q-input
-                    v-model="form.phone"
-                    label="Phone"
-                    outlined
-                    class="q-mb-md"
-                  />
-                  <q-select
-                    v-model="form.service"
-                    :options="serviceOptions"
-                    label="Service Needed"
-                    outlined
-                    class="q-mb-md"
-                  />
-                  <q-input
-                    v-model="form.message"
-                    label="Message"
-                    type="textarea"
-                    outlined
-                    rows="3"
-                    class="q-mb-md"
-                    :rules="[val => !!val || 'Message is required']"
-                  />
-                  <q-btn
+            <div class="contact-form-card">
+              <div class="card-content">
+                <h3>Send oss en melding</h3>
+                <form @submit.prevent="submitForm" class="contact-form">
+                  <div class="form-group">
+                    <label for="name">Fullt navn</label>
+                    <input
+                      id="name"
+                      v-model="form.name"
+                      type="text"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-post</label>
+                    <input
+                      id="email"
+                      v-model="form.email"
+                      type="email"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input
+                      id="phone"
+                      v-model="form.phone"
+                      type="tel"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="service">Tjeneste ønsket</label>
+                    <select
+                      id="service"
+                      v-model="form.service"
+                      class="form-select"
+                    >
+                      <option value="">Velg tjeneste...</option>
+                      <option v-for="option in serviceOptions" :key="option.value" :value="option.value">
+                        {{ option.label }}
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Melding</label>
+                    <textarea
+                      id="message"
+                      v-model="form.message"
+                      class="form-textarea"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
+                  <button
                     type="submit"
-                    color="primary"
-                    label="Send Message"
-                    size="lg"
-                    class="full-width"
-                    :loading="submitting"
-                  />
-                </q-form>
-              </q-card-section>
-            </q-card>
+                    class="submit-btn"
+                    :disabled="submitting"
+                  >
+                    {{ submitting ? 'Sender...' : 'Send melding' }}
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -267,58 +261,55 @@
 
 <script setup lang="ts">
 import { useSeoMeta } from 'nuxt/app'
-import { useQuasar } from 'quasar'
 import { ref } from 'vue'
 
 // SEO - useSeoMeta is auto-imported in Nuxt 3.7+
 useSeoMeta({
-  title: 'Professional VVS Services | V-VVS',
-  ogTitle: 'Professional VVS Services | V-VVS',
-  description: 'Expert plumbing, heating, and ventilation services with over 20 years of experience. 24/7 emergency services available.',
-  ogDescription: 'Expert plumbing, heating, and ventilation services with over 20 years of experience. 24/7 emergency services available.',
+  title: 'Profesjonelle VVS-tjenester | Vesterålen VVS',
+  ogTitle: 'Profesjonelle VVS-tjenester | Vesterålen VVS',
+  description: 'Ekspert rørlegger-, varme- og ventilasjonssystemer med over 20 års erfaring. 24/7 akuttberedskap tilgjengelig.',
+  ogDescription: 'Ekspert rørlegger-, varme- og ventilasjonssystemer med over 20 års erfaring. 24/7 akuttberedskap tilgjengelig.',
   ogImage: '/og-image.jpg',
   twitterCard: 'summary_large_image'
 })
-
-const $q = useQuasar()
 
 // Services data
 const services = ref([
   {
     id: 1,
-    title: 'Plumbing Services',
-    description: 'Complete plumbing solutions including installation, repair, and maintenance of water systems.',
-    image: '/api/placeholder/400/300'
+    title: 'Rørleggertjenester',
+    description: 'Komplette rørleggerløsninger inkludert installasjon, reparasjon og vedlikehold av vannsystemer.',
+    image: 'https://picsum.photos/400/300?random=2'
   },
   {
     id: 2,
-    title: 'Heating Systems',
-    description: 'Installation and maintenance of heating systems, radiators, and underfloor heating.',
-    image: '/api/placeholder/400/300'
+    title: 'Varmesystemer',
+    description: 'Installasjon og vedlikehold av varmesystemer, radiatorer og gulvvarme.',
+    image: 'https://picsum.photos/400/300?random=3'
   },
   {
     id: 3,
-    title: 'Ventilation',
-    description: 'Professional ventilation system design, installation, and air quality solutions.',
-    image: '/api/placeholder/400/300'
+    title: 'Ventilasjon',
+    description: 'Profesjonell ventilasjonssystemdesign, installasjon og luftkvalitetsløsninger.',
+    image: 'https://picsum.photos/400/300?random=4'
   },
   {
     id: 4,
-    title: 'Bathroom Renovation',
-    description: 'Complete bathroom renovation services from design to final installation.',
-    image: '/api/placeholder/400/300'
+    title: 'Baderomsrenovering',
+    description: 'Komplette baderomsrenoveringstjenester fra design til endelig installasjon.',
+    image: 'https://picsum.photos/400/300?random=5'
   },
   {
     id: 5,
-    title: 'Emergency Services',
-    description: '24/7 emergency plumbing and heating services for urgent issues.',
-    image: '/api/placeholder/400/300'
+    title: 'Akuttjenester',
+    description: '24/7 akutt rørlegger- og varmetjenester for øyeblikkelige problemer.',
+    image: 'https://picsum.photos/400/300?random=6'
   },
   {
     id: 6,
-    title: 'Maintenance',
-    description: 'Regular maintenance contracts to keep your VVS systems running efficiently.',
-    image: '/api/placeholder/400/300'
+    title: 'Vedlikehold',
+    description: 'Regelmessige vedlikeholdskontrakter for å holde dine VVS-systemer i effektiv drift.',
+    image: 'https://picsum.photos/400/300?random=8'
   }
 ])
 
@@ -332,13 +323,13 @@ const form = ref({
 })
 
 const serviceOptions = [
-  'Plumbing Services',
-  'Heating Systems',  
-  'Ventilation',
-  'Bathroom Renovation',
-  'Emergency Services',
-  'Maintenance Contract',
-  'Other'
+  { label: 'Rørleggertjenester', value: 'rorlegger' },
+  { label: 'Varmesystemer', value: 'varme' },
+  { label: 'Ventilasjon', value: 'ventilasjon' },
+  { label: 'Baderomsrenovering', value: 'baderom' },
+  { label: 'Akuttjenester', value: 'akutt' },
+  { label: 'Vedlikeholdskontrakt', value: 'vedlikehold' },
+  { label: 'Annet', value: 'annet' }
 ]
 
 const submitting = ref(false)
@@ -365,12 +356,7 @@ const submitForm = async () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000))
     
-    $q.notify({
-      color: 'positive',
-      message: 'Thank you! Your message has been sent successfully.',
-      icon: 'check',
-      position: 'top'
-    })
+    alert('Takk! Din melding har blitt sendt. Vi tar kontakt med deg snart.')
     
     // Reset form
     form.value = {
@@ -381,12 +367,7 @@ const submitForm = async () => {
       message: ''
     }
   } catch (error) {
-    $q.notify({
-      color: 'negative',
-      message: 'Sorry, there was an error sending your message. Please try again.',
-      icon: 'error',
-      position: 'top'
-    })
+    alert('Beklager, det oppstod en feil ved sending av meldingen. Prøv igjen.')
   } finally {
     submitting.value = false
   }
@@ -400,62 +381,248 @@ const submitForm = async () => {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: var(--gradient-primary);
+  color: var(--white);
   padding: 6rem 0;
 }
 
-.hero-content .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
 }
 
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 700;
+/* Features Section */
+.features-section {
+  padding: 5rem 0;
+  background: var(--light-bg);
+}
+
+.feature-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 1rem;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-content {
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
   margin-bottom: 1rem;
-  line-height: 1.2;
 }
 
-.hero-subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+.feature-card h3 {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.hero-description {
+/* Services Section */
+.services-section {
+  padding: 5rem 0;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 1.5rem 1rem;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.service-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: -40px;
+}
+
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  background: var(--light-bg);
+}
+
+.about-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.hero-actions {
+  color: #666;
   margin-bottom: 2rem;
 }
 
-.hero-image {
+.about-image {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5rem 0;
+  background: var(--gradient-primary);
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 1rem;
+  height: 100%;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--light-bg);
+  border-radius: var(--border-radius);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
   text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.stat-label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
 }
 
 /* Features Section */
 .features-section {
   padding: 4rem 0;
-  background: #f8f9fa;
-}
-
-.features-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  background: var(--light-bg);
 }
 
 .feature-card {
-  padding: 2rem 1rem;
   height: 100%;
-  transition: transform 0.3s ease;
+  transition: var(--transition);
 }
 
 .feature-card:hover {
@@ -473,34 +640,14 @@ const submitForm = async () => {
   padding: 5rem 0;
 }
 
-.services-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.section-header {
-  margin-bottom: 3rem;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: 1.2rem;
-  color: #666;
-}
-
 .service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  transition: var(--transition);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--box-shadow-hover);
 }
 
 .service-title {
@@ -517,13 +664,7 @@ const submitForm = async () => {
 /* About Section */
 .about-section {
   padding: 5rem 0;
-  background: #f8f9fa;
-}
-
-.about-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  background: var(--light-bg);
 }
 
 .about-text {
@@ -533,28 +674,6 @@ const submitForm = async () => {
   margin-bottom: 2rem;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.5rem;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1976d2;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0.5rem;
-}
-
 .about-image {
   margin-top: 2rem;
 }
@@ -562,13 +681,7 @@ const submitForm = async () => {
 /* Contact Section */
 .contact-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.contact-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  background: var(--gradient-primary);
 }
 
 .contact-info-card,
@@ -576,52 +689,41 @@ const submitForm = async () => {
   height: 100%;
 }
 
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-  gap: 1rem;
-}
-
-.contact-item:last-child {
-  margin-bottom: 0;
-}
-
-.contact-form .q-field {
-  margin-bottom: 1rem;
-}
-
 /* Responsive Design */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
+@media (max-width: 767px) {
+  .services-section .row {
+    justify-content: center;
   }
   
-  .hero-subtitle {
-    font-size: 1.3rem;
+  .services-section .col-12 {
+    max-width: 400px;
+    padding: 0 1rem;
   }
   
-  .section-title {
-    font-size: 2rem;
+  .about-image {
+    margin-top: 1rem;
   }
   
-  .hero-actions .q-btn {
-    width: 100%;
-    margin: 0.5rem 0;
+  .hero-section {
+    padding: 4rem 0;
   }
   
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .features-section,
+  .services-section,
+  .about-section,
+  .contact-section {
+    padding: 3rem 0;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
+  .hero-section {
+    padding: 3rem 0;
   }
   
-  .stats-grid {
-    grid-template-columns: 1fr;
+  .services-section .col-12 {
+    max-width: 350px;
+    padding: 0 1.5rem;
   }
 }
 </style>

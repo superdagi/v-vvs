@@ -1,0 +1,313 @@
+/* Global Variables */
+:root {
+  --primary-color: #1976d2;
+  --secondary-color: #26A69A;
+  --accent-color: #9C27B0;
+  --dark-color: #1d1d1d;
+  --positive-color: #21BA45;
+  --negative-color: #C10015;
+  --info-color: #31CCEC;
+  --warning-color: #F2C037;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+  --border-radius: 8px;
+  --max-width: 1200px;
+  --header-height: 60px;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Layout Components */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+/* Grid System */
+.col-12 {
+  flex: 0 0 100%;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 25%;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+  }
+  
+  .col-md-8 {
+    flex: 0 0 66.666667%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .col-lg-3 {
+    flex: 0 0 25%;
+  }
+  
+  .col-lg-4 {
+    flex: 0 0 33.333333%;
+  }
+  
+  .col-lg-6 {
+    flex: 0 0 50%;
+  }
+}
+
+/* Common Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.rounded-borders {
+  border-radius: var(--border-radius);
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Spacing */
+.q-gutter-lg > * {
+  margin: 0.5rem;
+}
+
+.q-mb-md {
+  margin-bottom: 1rem;
+}
+
+.q-mr-md {
+  margin-right: 1rem;
+}
+
+/* Hero Section Common Styles */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.hero-actions {
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+/* Section Common Styles */
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Background Gradients */
+.gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--info-color) 100%);
+}
+
+/* Loading and Interactive States */
+.q-loading {
+  opacity: 0.8;
+}
+
+.transition-all {
+  transition: var(--transition);
+}
+
+/* Button Enhancements */
+.q-btn {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+/* Form Elements */
+.contact-form .q-field {
+  margin-bottom: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer-content {
+  padding: 2rem 0;
+}
+
+.footer-logo h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.footer-contact {
+  margin-bottom: 1rem;
+}
+
+.footer-copyright {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .feature-card,
+  .service-card,
+  .info-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-actions .q-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,7 +1,6 @@
 import { Quasar, Notify, Dialog, Loading } from 'quasar'
 import iconSet from 'quasar/icon-set/material-icons'
 import '@quasar/extras/material-icons/material-icons.css'
-import 'quasar/dist/quasar.css'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(Quasar, {
