@@ -6,10 +6,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "npx nuxt prepare || nuxt prepare || true"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
+    "@nuxt/devtools": "^1.3.14",
     "nuxt": "^3.11.0",
     "sass-embedded": "^1.99.0",
     "vue": "^3.4.0",
@@ -20,5 +20,14 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "quasar": "^2.15.0"
+  },
+  "overrides": {
+    "vite": "^5.4.0",
+    "vite-plugin-vue-tracer": {
+      "vite": "^5.4.0"
+    }
+  },
+  "resolutions": {
+    "vite": "^5.4.0"
   }
 }
