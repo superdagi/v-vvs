@@ -2053,7 +2053,7 @@ const _QZufzX16YVncm34gUC88DKEIz1f6LeQCV4Dd15uGDJE = (function(nitro) {
 
 const rootDir = "C:/Dagarild/kode/v-vvs";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Professional VVS services and solutions"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Icons"}],"style":[],"script":[],"noscript":[],"title":"V-VVS Business"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"Professional VVS services and solutions"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Material+Icons"}],"style":[],"script":[],"noscript":[],"title":"V-VVS Business"};
 
 const appRootTag = "div";
 
@@ -2155,22 +2155,7 @@ _PlXVw9irHGqbFrAEMw7XBzMePoOKhv3d7WZ3wVAn8Kk,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
-const assets = {
-  "/index.mjs": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"1a15d-DF4B3ftjXH6g/gKgn6uEnxYWsT8\"",
-    "mtime": "2026-04-13T06:09:17.740Z",
-    "size": 106845,
-    "path": "index.mjs"
-  },
-  "/index.mjs.map": {
-    "type": "application/json",
-    "etag": "\"6aa6c-UjmcrNlRz3MtS2P9K28WZQCZShI\"",
-    "mtime": "2026-04-13T06:09:17.740Z",
-    "size": 436844,
-    "path": "index.mjs.map"
-  }
-};
+const assets = {};
 
 function readAsset (id) {
   const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));

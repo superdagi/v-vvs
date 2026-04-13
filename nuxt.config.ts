@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   nitro: {
+    preset: 'netlify-static',
     prerender: {
       routes: ['/', '/business', '/contact', '/projects']
     }
@@ -33,7 +34,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Professional VVS services and solutions' }
+        { name: 'description', content: 'Professional VVS services and solutions' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
