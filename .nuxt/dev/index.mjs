@@ -636,6 +636,18 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/": {
+        "prerender": true
+      },
+      "/business": {
+        "prerender": true
+      },
+      "/contact": {
+        "prerender": true
+      },
+      "/projects": {
+        "prerender": true
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -645,6 +657,18 @@ const _inlineRuntimeConfig = {
         "headers": {
           "cache-control": "public, max-age=1, immutable"
         }
+      },
+      "//_payload.json": {
+        "prerender": true
+      },
+      "/business/_payload.json": {
+        "prerender": true
+      },
+      "/contact/_payload.json": {
+        "prerender": true
+      },
+      "/projects/_payload.json": {
+        "prerender": true
       }
     }
   },
@@ -2134,16 +2158,16 @@ _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 const assets = {
   "/index.mjs": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"19f77-P4mAJnQyZCKNNaXtsYXToRZSUXA\"",
-    "mtime": "2026-04-13T05:56:31.361Z",
-    "size": 106359,
+    "etag": "\"1a15d-DF4B3ftjXH6g/gKgn6uEnxYWsT8\"",
+    "mtime": "2026-04-13T06:09:17.740Z",
+    "size": 106845,
     "path": "index.mjs"
   },
   "/index.mjs.map": {
     "type": "application/json",
-    "etag": "\"6a540-QsUl7hEFHEAZRC8ae7sLTMCPuUY\"",
-    "mtime": "2026-04-13T05:56:31.361Z",
-    "size": 435520,
+    "etag": "\"6aa6c-UjmcrNlRz3MtS2P9K28WZQCZShI\"",
+    "mtime": "2026-04-13T06:09:17.740Z",
+    "size": 436844,
     "path": "index.mjs.map"
   }
 };

@@ -2,7 +2,7 @@
   "name": "v-vvs-business",
   "private": true,
   "scripts": {
-    "build": "npx nuxt build",
+    "build": "npx nuxt generate",
     "dev": "npx nuxt dev",
     "generate": "npx nuxt generate",
     "preview": "npx nuxt preview",

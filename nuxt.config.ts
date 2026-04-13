@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
+  nitro: {
+    prerender: {
+      routes: ['/', '/business', '/contact', '/projects']
+    }
+  },
   modules: [
     '@vueuse/nuxt'
   ],
