@@ -59,13 +59,13 @@
     <section class="cta-section">
       <div class="container">
         <div class="cta-content text-center">
-          <h2>Klar for å lære mer?</h2>
-          <p>Oppdag våre omfattende tjenester og hvordan vi kan hjelpe deg</p>
+          <h2>Se våre fantastiske prosjekter!</h2>
+          <p>Utforsk løsningene vi har realisert og la deg inspirere av vårt håndverk</p>
           <q-btn
             size="lg"
             color="primary"
-            label="Se våre tjenester"
-            @click="goToBusiness"
+            label="Se våre prosjekter"
+            @click="goToProjects"
             class="cta-btn"
             unelevated
           />
@@ -76,17 +76,25 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content text-center">
-          <div class="footer-logo">
-            <h3>Vesterålen VVS</h3>
+        <div class="footer-content">
+          <div class="footer-info no-wrap">
+            <div class="footer-logo">
+              <h3>Vesterålen VVS</h3>
+            </div>
+            <div class="footer-contact">
+              <p>Telefon: (+47) 99 99 00 50</p>
+              <p>E-post: post@v-vvs.no</p>
+              <p>Elterveien 175, 8400 Sortland</p>
+            </div>
           </div>
-          <div class="footer-contact">
-            <p>Telefon: (+47) 99 99 00 50 | E-post: post@v-vvs.no</p>
-            <p>Elterveien 175, 8400 Sortland</p>
+          <div class="footer-mester  ">
+            <div  >
+              <img src="/assets/images/mester-logo.png" alt="VVS Mester Sertifisert" class="mester-logo">
+            </div>
           </div>
-          <div class="footer-copyright">
-            <p>&copy; {{ currentYear }} Vesterålen VVS. Alle rettigheter forbeholdes.</p>
-          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; {{ currentYear }} Vesterålen VVS. Alle rettigheter forbeholdes.</p>
         </div>
       </div>
     </footer>
@@ -111,6 +119,10 @@ const currentYear = new Date().getFullYear()
 // Methods
 const goToBusiness = () => {
   navigateTo('/business')
+}
+
+const goToProjects = () => {
+  navigateTo('/projects')
 }
 </script>
 
@@ -192,18 +204,37 @@ const goToBusiness = () => {
 .footer {
   background: #2c3e50;
   color: var(--white);
-  padding: 3rem 0;
   margin-top: auto;
 }
 
 .footer-content {
-  max-width: 600px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-info {
+  text-align: left;
+}
+
+.footer-mester {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-copyright {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
 .footer-logo h3 {
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   color: var(--primary-color);
 }
 
@@ -218,10 +249,34 @@ const goToBusiness = () => {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+ 
+
+.mester-logo {
+  height: 400px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 /* Responsive Design Overrides */
 @media (max-width: 768px) {
   .cta-content h2 {
     font-size: 2rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-info {
+    text-align: center;
+  }
+  
+  .mester-logo {
+    height: 150px;
   }
 }
 

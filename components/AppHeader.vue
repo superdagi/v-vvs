@@ -3,7 +3,7 @@
     <div class="container">
       <nav class="nav-content">
         <div class="logo">
-          <h1>Vesterålen VVS</h1>
+          <img src="/assets/images/v-vvs/v-vvs.png" alt="Vesterålen VVS" class="logo-img">
         </div>
         
         <!-- Desktop Navigation -->
@@ -96,9 +96,9 @@ const closeMenu = () => {
 <style scoped>
 /* Navigation Header */
 .nav-header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -108,13 +108,13 @@ const closeMenu = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem 0;
 }
 
-.logo h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: black;
+.logo .logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -125,14 +125,14 @@ const closeMenu = () => {
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-color);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   font-size: 1rem;
   transition: var(--transition);
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: #FF8F00;
 }
 
 .nav-link.router-link-active {
@@ -176,6 +176,14 @@ const closeMenu = () => {
 
 .mobile-only {
   display: none;
+}
+
+.mobile-only .q-btn {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mobile-only .q-btn:hover {
+  color: #FF8F00;
 }
 
 /* Mobile Menu Styles */
@@ -244,9 +252,8 @@ const closeMenu = () => {
     display: block;
   }
   
-  .logo h1 {
-    font-size: 1.3rem;
-    line-height: 1.2;
+  .logo .logo-img {
+    height: 30px;
   }
   
   .nav-link {

@@ -102,6 +102,14 @@
       </div>
     </section>
 
+    <!-- Mester Badge Section -->
+    <section class="mester-section">
+      <div class="container text-center">
+        <div class="mester-badge">
+          <img src="/assets/images/mester-logo.png" alt="VVS Mester Sertifisert" class="mester-logo">
+        </div>
+      </div>
+    </section>
  
   </div>
 </template>
@@ -389,5 +397,21 @@ const submitForm = async () => {
     width: 100%;
     margin-top: 1rem;
   }
+}
+
+/* Mester Badge Section */
+.mester-section {
+  padding: 2rem 0;
+  background: #f8f9fa;
+}
+
+.mester-badge {
+  margin: 1rem 0;
+}
+
+.mester-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 </style>
