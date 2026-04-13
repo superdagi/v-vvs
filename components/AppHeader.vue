@@ -42,7 +42,7 @@
   margin: 0;
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: black;
 }
 
 .nav-links {
@@ -55,6 +55,7 @@
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
+  font-size: 1rem;
   transition: var(--transition);
 }
 
@@ -63,8 +64,18 @@
 }
 
 .nav-link.router-link-active {
-  color: var(--primary-color);
+  background: #FF8F00;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   font-weight: 600;
+}
+
+.nav-link.router-link-active[href="/"] {
+  background: #FF8F00;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
 
 .nav-link-button {
@@ -93,6 +104,10 @@
   
   .logo h1 {
     font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.95rem;
   }
 }
 </style>

@@ -63,8 +63,7 @@
           <p>Oppdag våre omfattende tjenester og hvordan vi kan hjelpe deg</p>
           <q-btn
             size="lg"
-            color="white"
-            text-color="primary"
+            color="primary"
             label="Se våre tjenester"
             @click="goToBusiness"
             class="cta-btn"
@@ -82,8 +81,8 @@
             <h3>Vesterålen VVS</h3>
           </div>
           <div class="footer-contact">
-            <p>Telefon: +47 123 45 678 | E-post: kontakt@v-vvs.no</p>
-            <p>Eksempelveien 123, 0123 Oslo, Norway</p>
+            <p>Telefon: (+47) 99 99 00 50 | E-post: post@v-vvs.no</p>
+            <p>Elterveien 175, 8400 Sortland</p>
           </div>
           <div class="footer-copyright">
             <p>&copy; {{ currentYear }} Vesterålen VVS. Alle rettigheter forbeholdes.</p>
@@ -160,8 +159,13 @@ const goToBusiness = () => {
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: var(--primary-color);
+  background: #4A5568;
   color: var(--white);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-content h2 {
@@ -180,6 +184,8 @@ const goToBusiness = () => {
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
+  min-height: 48px;
+  display: inline-block;
 }
 
 /* Footer */
