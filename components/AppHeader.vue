@@ -20,44 +20,59 @@
             flat
             dense
             :label="currentPageName"
-            icon-right="menu"
-          >
-            <q-menu>
-              <q-list style="min-width: 200px">
-                <q-item clickable v-close-popup>
-                  <q-item-section>
-                    <NuxtLink to="/" class="mobile-nav-link">Hjem</NuxtLink>
-                  </q-item-section>
-                </q-item>
-                <q-item clickable v-close-popup>
-                  <q-item-section>
-                    <NuxtLink to="/business" class="mobile-nav-link">Tjenester</NuxtLink>
-                  </q-item-section>
-                </q-item>
-                <q-item clickable v-close-popup>
-                  <q-item-section>
-                    <NuxtLink to="/projects" class="mobile-nav-link">Prosjekter</NuxtLink>
-                  </q-item-section>
-                </q-item>
-                <q-item clickable v-close-popup>
-                  <q-item-section>
-                    <NuxtLink to="/contact" class="mobile-nav-link">Kontakt</NuxtLink>
-                  </q-item-section>
-                </q-item>
-              </q-list>
-            </q-menu>
-          </q-btn>
+            :icon-right="isMenuOpen ? 'close' : 'menu'"
+            @click="toggleMenu"
+          />
         </div>
       </nav>
+    </div>
+    
+    <!-- Full Width Mobile Menu -->
+    <div 
+      v-if="isMenuOpen" 
+      class="mobile-menu-backdrop"
+      @click="closeMenu"
+    >
+      <div class="mobile-menu-content">
+        <NuxtLink 
+          to="/" 
+          class="mobile-nav-link"
+          @click="closeMenu"
+        >
+          Hjem
+        </NuxtLink>
+        <NuxtLink 
+          to="/business" 
+          class="mobile-nav-link"
+          @click="closeMenu"
+        >
+          Tjenester
+        </NuxtLink>
+        <NuxtLink 
+          to="/projects" 
+          class="mobile-nav-link"
+          @click="closeMenu"
+        >
+          Prosjekter
+        </NuxtLink>
+        <NuxtLink 
+          to="/contact" 
+          class="mobile-nav-link"
+          @click="closeMenu"
+        >
+          Kontakt
+        </NuxtLink>
+      </div>
     </div>
   </header>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from '#app'
 
 const route = useRoute()
+const isMenuOpen = ref(false)
 
 const currentPageName = computed(() => {
   const routeMap = {
@@ -68,6 +83,14 @@ const currentPageName = computed(() => {
   }
   return routeMap[route.path] || 'Hjem'
 })
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
 </script>
 
 <style scoped>
@@ -155,24 +178,62 @@ const currentPageName = computed(() => {
   display: none;
 }
 
-/* Mobile navigation links inside menu */
+/* Mobile Menu Styles */
+.mobile-menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .mobile-nav-link {
+  display: block;
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
-  font-size: 1rem;
-  display: block;
-  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: var(--transition);
 }
 
 .mobile-nav-link:hover {
+  background: rgba(255, 143, 0, 0.1);
   color: var(--primary-color);
+}
+
+.mobile-nav-link.router-link-active {
+  background: #FF8F00;
+  color: white !important;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
   .nav-header {
     margin-top: -0.5rem;
     margin-bottom: -0.5rem;
+    height: 50px;
+  }
+  
+  .nav-content {
+    padding: 0.4rem 0;
+    height: 100%;
+    min-height: 50px;
   }
   
   .desktop-nav {
@@ -184,7 +245,8 @@ const currentPageName = computed(() => {
   }
   
   .logo h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.2;
   }
   
   .nav-link {
