@@ -1,23 +1,24 @@
 <template>
   <div class="landing-page">
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-background">
+    <section class="flex flex-center column" style="flex: 1; min-height: 45vh; color: var(--white); background: var(--gradient-primary);">
+      <div class="full-width q-py-xl">
         <div class="container">
-          <div class="hero-content text-center">
-            <h1 class="hero-title">
+          <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+            <h1 class="hero-title q-mb-md">
               Velkommen til Vesterålen VVS
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle q-mb-lg">
               Din pålitelige partner for profesjonelle VVS-løsninger
             </p>
-            <div class="hero-actions">
+            <div>
               <q-btn
                 size="lg"
                 color="primary"
                 label="Se våre tjenester"
                 @click="goToBusiness"
-                class="hero-btn"
+                class="q-px-xl q-py-md"
+                style="font-size: 1.1rem; font-weight: 600;"
                 unelevated
               />
             </div>
@@ -27,27 +28,27 @@
     </section>
 
     <!-- Quick Info Section -->
-    <section class="quick-info">
+    <section class="extra-padding" style="background: var(--light-bg);">
       <div class="container">
         <div class="row justify-center">
           <div class="col-12 col-md-4">
-            <div class="info-card text-center">
+            <div class="text-center q-pa-md">
               <q-icon name="build" size="3rem" color="primary" />
-              <h3>Ekspert tjenester</h3>
+              <h3 class="q-mt-md q-mb-sm">Ekspert tjenester</h3>
               <p>Profesjonell rørlegger-, varme- og ventilasjonsløsninger</p>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="info-card text-center">
+            <div class="text-center q-pa-md">
               <q-icon name="timeline" size="3rem" color="primary" />
-              <h3>20+ år</h3>
+              <h3 class="q-mt-md q-mb-sm">20+ år</h3>
               <p>Tiår med erfaring i å betjene lokalsamfunnet</p>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="info-card text-center">
+            <div class="text-center q-pa-md">
               <q-icon name="support_agent" size="3rem" color="primary" />
-              <h3>24/7 støtte</h3>
+              <h3 class="q-mt-md q-mb-sm">24/7 støtte</h3>
               <p>Døgnkontinuerlig beredskap for akutte problemer</p>
             </div>
           </div>
@@ -56,17 +57,18 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="extra-padding" style="background: #4A5568; color: var(--white);">
       <div class="container">
-        <div class="cta-content text-center">
-          <h2>Se våre fantastiske prosjekter!</h2>
-          <p>Utforsk løsningene vi har realisert og la deg inspirere av vårt håndverk</p>
+        <div class="text-center relative">
+          <h2 class="section-title q-mb-md">Se våre fantastiske prosjekter!</h2>
+          <p class="hero-description q-mb-lg" style="opacity: 0.9;">Utforsk løsningene vi har realiseret og la deg inspirere av vårt håndverk</p>
           <q-btn
             size="lg"
             color="primary"
             label="Se våre prosjekter"
             @click="goToProjects"
-            class="cta-btn"
+            class="q-pa-md"
+            style="font-size: 1.1rem; font-weight: 600; min-height: 48px;"
             unelevated
           />
         </div>
@@ -74,26 +76,29 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer extra-padding">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-info no-wrap">
-            <div class="footer-logo">
-              <h3>Vesterålen VVS</h3>
-            </div>
-            <div class="footer-contact">
-              <p>Telefon: (+47) 99 99 00 50</p>
-              <p>E-post: post@v-vvs.no</p>
-              <p>Elterveien 175, 8400 Sortland</p>
+        <div class="row justify-between items-center q-mb-md">
+          <div class="col-4">
+            <div class="footer-text-alignment">
+              <div class="footer-logo">
+                <h3>Vesterålen VVS</h3>
+              </div>
+              <div class="footer-contact">
+                <p>Telefon: (+47) 99 99 00 50</p>
+                <p>E-post: post@v-vvs.no</p>
+                <p>Elterveien 175, 8400 Sortland</p>
+              </div>
             </div>
           </div>
-          <div class="footer-mester  ">
-            <div  >
-              <img src="/assets/images/mester-logo.png" alt="VVS Mester Sertifisert" class="mester-logo">
-            </div>
+          <div class="col-4 text-center q-pt-md">
+            <img src="/assets/images/v-vvs/v-vvs-mester.png" alt="VVS Mester Sertifisert" class="vvs-mester-logo">
+          </div>
+          <div class="col-4 mester-logo-alignment">
+            <img src="/assets/images/mester-logo.png" alt="Mester Sertifisert" class="mester-logo-center">
           </div>
         </div>
-        <div class="footer-copyright">
+        <div class="text-center q-pt-md">
           <p>&copy; {{ currentYear }} Vesterålen VVS. Alle rettigheter forbeholdes.</p>
         </div>
       </div>
@@ -133,71 +138,54 @@ const goToProjects = () => {
   flex-direction: column;
 }
 
-/* Hero Section */
-.hero {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  min-height: 45vh;
-  color: var(--white);
+/* Restore original font styling - using global.css classes */
+.landing-page .hero-title {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
 }
 
-.hero {
-  background: var(--gradient-primary);
+.landing-page .hero-subtitle {
+  font-size: 1.5rem !important;
+  font-weight: 300 !important;
+  opacity: 0.9 !important;
 }
 
-.hero-background {
-  width: 100%;
-  padding: 4rem 0;
+.landing-page .section-title {
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+.landing-page .hero-description {
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
 }
 
-.hero-btn {
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+/* Extra padding for sections */
+.extra-padding {
+  padding: 6rem 0 !important;
 }
 
-/* Quick Info Section */
-.quick-info {
-  padding: 4rem 0;
-  background: var(--light-bg);
+/* Mester logo alignment */
+.mester-logo-alignment {
+  text-align: center;
 }
 
-/* CTA Section */
-.cta-section {
-  padding: 5rem 0;
-  background: #4A5568;
-  color: var(--white);
+@media (min-width: 768px) {
+  .mester-logo-alignment {
+    text-align: right;
+  }
 }
 
-.cta-content {
-  position: relative;
-  z-index: 1;
+/* Footer text alignment */
+.footer-text-alignment {
+  text-align: center;
 }
 
-.cta-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.cta-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.cta-btn {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  min-height: 48px;
-  display: inline-block;
+@media (min-width: 768px) {
+  .footer-text-alignment {
+    text-align: left;
+  }
 }
 
 /* Footer */
@@ -207,84 +195,84 @@ const goToProjects = () => {
   margin-top: auto;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.footer-info {
-  text-align: left;
-}
-
-.footer-mester {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-copyright {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: center;
-}
-
 .footer-logo h3 {
   font-size: 1.8rem;
   margin-bottom: 0.75rem;
   color: var(--primary-color);
+  white-space: nowrap;
 }
 
 .footer-contact p {
   margin-bottom: 0.5rem;
   opacity: 0.9;
+  white-space: nowrap;
 }
 
-.footer-copyright {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
- 
-
-.mester-logo {
-  height: 400px;
+.mester-logo-center {
+  height: 420px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
 
+.vvs-mester-logo {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* Responsive Design Overrides */
 @media (max-width: 768px) {
-  .cta-content h2 {
-    font-size: 2rem;
+  h2 {
+    font-size: 2rem !important;
   }
   
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .footer-info {
+  .row {
+    flex-direction: column !important;
     text-align: center;
   }
   
-  .mester-logo {
-    height: 150px;
+  .col-4 {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-contact p {
+    font-size: 0.95rem;
+  }
+  
+  .mester-logo-center,
+  .vvs-mester-logo {
+    height: 280px;
+  }
+  
+  /* Make VVS mester logo smaller on mobile */
+  .vvs-mester-logo {
+    height: 120px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-btn,
-  .cta-btn {
+  .q-btn {
     width: 100%;
     max-width: 300px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.3rem;
+  }
+  
+  .footer-contact p {
+    font-size: 0.9rem;
+  }
+  
+  .mester-logo-center,
+  .vvs-mester-logo {
+    height: 100px;
   }
 }
 </style>
