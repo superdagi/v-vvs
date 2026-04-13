@@ -1,4 +1,4 @@
-import { Quasar, Notify, Dialog, Loading, QBtn, QIcon } from 'quasar'
+import { Quasar, Notify, Dialog, Loading, QBtn, QIcon, QMenu, QList, QItem, QItemSection, ClosePopup } from 'quasar'
 import iconSet from 'quasar/icon-set/material-icons'
 import '@quasar/extras/material-icons/material-icons.css'
 
@@ -9,9 +9,16 @@ export default defineNuxtPlugin((nuxtApp) => {
       Dialog,
       Loading
     },
+    directives: {
+      ClosePopup
+    },
     components: {
       QBtn,
-      QIcon
+      QIcon,
+      QMenu,
+      QList,
+      QItem,
+      QItemSection
     },
     iconSet: iconSet,
     config: {

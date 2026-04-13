@@ -13,9 +13,9 @@
             </p>
             <div class="hero-actions">
               <q-btn
-                size="xl"
+                size="lg"
                 color="primary"
-                label="Utforsk våre tjenester"
+                label="Se våre tjenester"
                 @click="goToBusiness"
                 class="hero-btn"
                 unelevated

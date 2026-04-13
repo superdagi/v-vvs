@@ -5,11 +5,48 @@
         <div class="logo">
           <h1>Vesterålen VVS</h1>
         </div>
-        <div class="nav-links">
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links desktop-nav">
           <NuxtLink to="/" class="nav-link">Hjem</NuxtLink>
           <NuxtLink to="/business" class="nav-link">Tjenester</NuxtLink>
           <NuxtLink to="/projects" class="nav-link">Prosjekter</NuxtLink>
           <NuxtLink to="/contact" class="nav-link">Kontakt</NuxtLink>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <div class="mobile-only">
+          <q-btn
+            flat
+            dense
+            :label="currentPageName"
+            icon-right="menu"
+          >
+            <q-menu>
+              <q-list style="min-width: 200px">
+                <q-item clickable v-close-popup>
+                  <q-item-section>
+                    <NuxtLink to="/" class="mobile-nav-link">Hjem</NuxtLink>
+                  </q-item-section>
+                </q-item>
+                <q-item clickable v-close-popup>
+                  <q-item-section>
+                    <NuxtLink to="/business" class="mobile-nav-link">Tjenester</NuxtLink>
+                  </q-item-section>
+                </q-item>
+                <q-item clickable v-close-popup>
+                  <q-item-section>
+                    <NuxtLink to="/projects" class="mobile-nav-link">Prosjekter</NuxtLink>
+                  </q-item-section>
+                </q-item>
+                <q-item clickable v-close-popup>
+                  <q-item-section>
+                    <NuxtLink to="/contact" class="mobile-nav-link">Kontakt</NuxtLink>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
         </div>
       </nav>
     </div>
@@ -17,7 +54,20 @@
 </template>
 
 <script setup>
-// No JavaScript needed for simple navigation
+import { computed } from 'vue'
+import { useRoute } from '#app'
+
+const route = useRoute()
+
+const currentPageName = computed(() => {
+  const routeMap = {
+    '/': 'Hjem',
+    '/business': 'Tjenester', 
+    '/projects': 'Prosjekter',
+    '/contact': 'Kontakt'
+  }
+  return routeMap[route.path] || 'Hjem'
+})
 </script>
 
 <style scoped>
@@ -29,7 +79,6 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0.5rem 0;
 }
 
 .nav-content {
@@ -97,9 +146,41 @@
   color: var(--white) !important;
 }
 
+/* Mobile/Desktop Visibility */
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Mobile navigation links inside menu */
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
+  .nav-header {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
   }
   
   .logo h1 {
