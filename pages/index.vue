@@ -1,8 +1,9 @@
 <template>
   <div class="landing-page">
     <!-- Hero Section -->
-    <section class="flex flex-center column" style="flex: 1; min-height: 45vh; color: var(--white); background: var(--gradient-primary);">
-      <div class="full-width q-py-xl">
+    <section class="hero-section flex flex-center column" style="flex: 1; min-height: 60vh; color: var(--white); position: relative;">
+      <div class="hero-overlay"></div>
+      <div class="full-width q-py-xl" style="position: relative; z-index: 2;">
         <div class="container">
           <div class="text-center" style="max-width: 800px; margin: 0 auto;">
             <h1 class="hero-title q-mb-md">
@@ -136,6 +137,24 @@ const goToProjects = () => {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Hero Section with Background Image */
+.hero-section {
+  background-image: url('~/assets/fix-wc.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 32, 44, 0.425) 0%, rgba(45, 55, 72, 0.7) 100%);
+  z-index: 1;
 }
 
 /* Restore original font styling - using global.css classes */

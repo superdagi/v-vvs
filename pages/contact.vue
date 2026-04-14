@@ -1,8 +1,9 @@
 <template>
   <div class="contact-page">
     <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
+    <section class="hero-section flex flex-center column" style="flex: 1; min-height: 60vh; color: var(--white); position: relative;">
+      <div class="hero-overlay"></div>
+      <div class="full-width q-py-xl" style="position: relative; z-index: 2;">
         <div class="container">
           <div class="row items-center">
             <div class="col-12 text-center">
@@ -195,9 +196,20 @@ const submitForm = async () => {
 
 /* Hero Section */
 .hero-section {
-  background: var(--gradient-primary);
-  color: var(--white);
-  padding: 6rem 0;
+  background-image: url('~/assets/pipes.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 32, 44, 0.986) 0%, rgba(77, 94, 124, 0.75) 100%);
+  z-index: 1;
 }
 
 /* Contact Info Section */

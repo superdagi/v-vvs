@@ -21,7 +21,7 @@
             <div class="col-12 col-md-6">
               <div class="hero-image">
                 <img
-                  src="https://picsum.photos/600/400?random=1"
+                  src="~/assets/plumbing-repair-service_181624-27146.avif"
                   alt="VVS-fagperson på jobb"
                   class="rounded-borders hero-img"
                 />
