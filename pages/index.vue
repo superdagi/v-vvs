@@ -145,6 +145,9 @@ const goToProjects = () => {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  margin: .5rem 1.5rem;
+  overflow: hidden;
 }
 
 .hero-overlay {
