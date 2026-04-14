@@ -21,7 +21,7 @@
             <div class="col-12 col-md-6">
               <div class="hero-image">
                 <img
-                  src="~/assets/plumbing-repair-service_181624-27146.avif"
+                  :src="heroImage"
                   alt="VVS-fagperson på jobb"
                   class="rounded-borders hero-img"
                 />
@@ -262,6 +262,7 @@
 <script setup lang="ts">
 import { useSeoMeta } from 'nuxt/app'
 import { ref } from 'vue'
+import heroImage from '~/assets/plumbing-repair-service_181624-27146.avif';
 
 // SEO - useSeoMeta is auto-imported in Nuxt 3.7+
 useSeoMeta({

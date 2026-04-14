@@ -1,32 +1,14 @@
 <template>
   <div class="landing-page">
     <!-- Hero Section -->
-    <section class="hero-section flex flex-center column" style="flex: 1; min-height: 60vh; color: var(--white); position: relative;">
-      <div class="hero-overlay"></div>
-      <div class="full-width q-py-xl" style="position: relative; z-index: 2;">
-        <div class="container">
-          <div class="text-center" style="max-width: 800px; margin: 0 auto;">
-            <h1 class="hero-title q-mb-md">
-              Velkommen til Vesterålen VVS
-            </h1>
-            <p class="hero-subtitle q-mb-lg">
-              Din pålitelige partner for profesjonelle VVS-løsninger
-            </p>
-            <div>
-              <q-btn
-                size="lg"
-                color="primary"
-                label="Se våre tjenester"
-                @click="goToBusiness"
-                class="q-px-xl q-py-md"
-                style="font-size: 1.1rem; font-weight: 600;"
-                unelevated
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      title="Velkommen til Vesterålen VVS"
+      subtitle="Din pålitelige partner for profesjonelle VVS-løsninger"
+      button-text="Se våre tjenester"
+      :background-image="`url('${fixWcImage}')`"
+        height="50vh"
+      @button-click="goToBusiness"
+    />
 
     <!-- Quick Info Section -->
     <section class="extra-padding" style="background: var(--light-bg);">
@@ -109,6 +91,7 @@
 
 <script setup lang="ts">
 import { navigateTo, useHead, useSeoMeta } from 'nuxt/app';
+import fixWcImage from '~/assets/fix-wc.jpg';
 
 // SEO - useSeoMeta is auto-imported in Nuxt 3.7+
 useSeoMeta({
@@ -139,40 +122,7 @@ const goToProjects = () => {
   flex-direction: column;
 }
 
-/* Hero Section with Background Image */
-.hero-section {
-  background-image: url('~/assets/fix-wc.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 1.5rem;
-  margin: .5rem 1.5rem;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 32, 44, 0.425) 0%, rgba(45, 55, 72, 0.7) 100%);
-  z-index: 1;
-}
-
-/* Restore original font styling - using global.css classes */
-.landing-page .hero-title {
-  font-size: 3.5rem !important;
-  font-weight: 700 !important;
-  line-height: 1.2 !important;
-}
-
-.landing-page .hero-subtitle {
-  font-size: 1.5rem !important;
-  font-weight: 300 !important;
-  opacity: 0.9 !important;
-}
-
+/* Section title styling */
 .landing-page .section-title {
   font-size: 2.5rem !important;
   font-weight: 600 !important;

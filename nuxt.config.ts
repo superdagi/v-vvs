@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
+  compatibilityDate: '2026-04-14',
+  typescript: {
+    typeCheck: false
+  },
   nitro: {
     preset: 'netlify-static',
     prerender: {

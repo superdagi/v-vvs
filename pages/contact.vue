@@ -1,39 +1,31 @@
 <template>
   <div class="contact-page">
     <!-- Hero Section -->
-    <section class="hero-section flex flex-center column" style="flex: 1; min-height: 60vh; color: var(--white); position: relative;">
-      <div class="hero-overlay"></div>
-      <div class="full-width q-py-xl" style="position: relative; z-index: 2;">
-        <div class="container">
-          <div class="row items-center">
-            <div class="col-12 text-center">
-              <h1 class="hero-title">
-                Ta kontakt med oss i dag!
-              </h1>
-              <p class="hero-description">
-                Ring oss i dag for personlig oppfølging og lokal tilstedeværelse. Vi tilbyr rørleggertjenester til både private og næringskunder. Vesterålen VVS har 200 års erfaring og vi ønsker å være din foretrukne rørlegger.
-              </p>
-              <div class="hero-actions">
-                <a
-                  href="tel:+4790171850"
-                  class="hero-btn primary"
-                >
-                  <i class="material-icons">phone</i>
-                  Ring oss nå
-                </a>
-                <a
-                  href="mailto:frank@larsenvvs.no"
-                  class="hero-btn secondary"
-                >
-                  <i class="material-icons">email</i>
-                  Send e-post
-                </a>
-              </div>
-            </div>
-          </div>
+    <HeroSection
+      title="Ta kontakt med oss i dag!"
+      subtitle="Ring oss i dag for personlig oppfølging og lokal tilstedeværelse. Vi tilbyr rørleggertjenester til både private og næringskunder. Vesterålen VVS har 200 års erfaring og vi ønsker å være din foretrukne rørlegger."
+      :background-image="`url('${pipesImage}')`"
+      height="40vh"
+    >
+      <template #actions>
+        <div class="hero-actions">
+          <a
+            href="tel:+4790171850"
+            class="hero-btn primary"
+          >
+            <i class="material-icons">phone</i>
+            Ring oss nå
+          </a>
+          <a
+            href="mailto:frank@larsenvvs.no"
+            class="hero-btn secondary"
+          >
+            <i class="material-icons">email</i>
+            Send e-post
+          </a>
         </div>
-      </div>
-    </section>
+      </template>
+    </HeroSection>
 
     <!-- Contact Information Section -->
     <section class="contact-info-section">
@@ -119,6 +111,7 @@
 import { useSeoMeta } from 'nuxt/app'
 import { useQuasar } from 'quasar'
 import { ref } from 'vue'
+import pipesImage from '~/assets/pipes.jpg';
 
 // SEO
 useSeoMeta({
@@ -194,27 +187,6 @@ const submitForm = async () => {
   min-height: 100vh;
 }
 
-/* Hero Section */
-.hero-section {
-  background-image: url('~/assets/pipes.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 1.5rem;
-  margin: 1rem 1.5rem;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 32, 44, 0.986) 0%, rgba(77, 94, 124, 0.75) 100%);
-  z-index: 1;
-}
-
 /* Contact Info Section */
 .contact-info-section {
   padding: 5rem 0;
@@ -283,66 +255,6 @@ const submitForm = async () => {
 
 .contact-btn .material-icons {
   font-size: 1.2rem;
-}
-
-/* Hero Buttons */
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: var(--transition);
-}
-
-.hero-btn.primary {
-  background: var(--primary-color);
-  color: white;
-  border: 2px solid var(--primary-color);
-}
-
-.hero-btn.primary:hover {
-  background: transparent;
-  color: white;
-  border-color: white;
-}
-
-.hero-btn.secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.hero-btn.secondary:hover {
-  background: white;
-  color: var(--primary-color);
-}
-
-.hero-btn .material-icons {
-  font-size: 1.3rem;
-}
-
-@media (max-width: 768px) {
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hero-btn {
-    width: 100%;
-    max-width: 250px;
-    justify-content: center;
-  }
 }
 
 /* Contact Form Section */
