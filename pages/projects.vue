@@ -1,35 +1,12 @@
 <template>
   <div class="projects-page">
     <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="container">
-          <div class="row items-center">
-            <div class="col-12 col-md-6">
-              <h1 class="hero-title">
-                Våre prosjekter
-              </h1>
-              <h2 class="hero-subtitle">
-                Se eksempler på vårt arbeid og kvalitet
-              </h2>
-              <p class="hero-description">
-                Fra små reparasjoner til store installasjoner - se hvordan vi har hjulpet våre kunder 
-                med profesjonelle VVS-løsninger gjennom årene.
-              </p>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="hero-image">
-                <img
-                  src="https://picsum.photos/600/400?random=9"
-                  alt="VVS-prosjekt i utførelse"
-                  class="rounded-borders hero-img"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      title="Våre prosjekter"
+      subtitle="Fra små reparasjoner til store installasjoner - se hvordan vi har hjulpet våre kunder med profesjonelle VVS-løsninger gjennom årene."
+      :background-image="`url('${projectsHeroImage}')`"
+      height="45vh"
+    />
 
     <!-- Filter Section -->
     <section class="filter-section">
@@ -110,6 +87,7 @@
 <script setup lang="ts">
 import { useSeoMeta } from 'nuxt/app'
 import { ref, computed } from 'vue'
+import projectsHeroImage from '~/assets/Premier-Plumbing-7.png';
 
 // SEO
 useSeoMeta({

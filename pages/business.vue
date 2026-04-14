@@ -1,36 +1,12 @@
 <template>
   <div class="business-page">
     <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="container">
-          <div class="row items-center">
-            <div class="col-12 col-md-6">
-              <h1 class="hero-title">
-                Profesjonelle VVS-løsninger
-              </h1>
-              <h2 class="hero-subtitle">
-                Ekspert på rørleggerjenester for bolig og næring i offentlig og privat sektor
-              </h2>
-              <p class="hero-description">
-                Med over 20 års erfaring tilbyr vi pålitelige og effektive 
-                VVS-løsninger for både bolig- og næringseiendommer.
-              </p>
-           
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="hero-image">
-                <img
-                  :src="heroImage"
-                  alt="VVS-fagperson på jobb"
-                  class="rounded-borders hero-img"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      title="Profesjonelle VVS-løsninger"
+      subtitle="Med over 20 års erfaring tilbyr vi pålitelige og effektive VVS-løsninger for både bolig- og næringseiendommer."
+      :background-image="`url('${heroImage}')`"
+      height="50vh"
+    />
 
     <!-- Features Section -->
     <section class="features-section">
