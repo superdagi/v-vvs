@@ -54,7 +54,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   height: '60vh',
-  maxWidth: '1600px'
+  maxWidth: '1180px'
 })
 defineEmits<{
   buttonClick: []

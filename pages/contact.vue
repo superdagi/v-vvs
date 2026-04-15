@@ -18,7 +18,7 @@
  
         
         <div class="row justify-center">
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 q-mb-md ">
             <div class="contact-card text-center">
               <i class="material-icons contact-icon">phone</i>
               <h3>Ring oss</h3>
@@ -33,7 +33,7 @@
             </div>
           </div>
           
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 q-mb-md">
             <div class="contact-card text-center">
               <i class="material-icons contact-icon">email</i>
               <h3>E-post</h3>
@@ -48,7 +48,7 @@
             </div>
           </div>
           
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 q-mb-md">
             <div class="contact-card text-center">
               <i class="material-icons contact-icon">location_on</i>
               <h3>Her holder vi til</h3>

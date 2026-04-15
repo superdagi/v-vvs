@@ -12,7 +12,7 @@
     <section class="features-section">
       <div class="container">
         <div class="row justify-center">
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 q-mb-md">
             <div class="feature-card text-center">
               <div class="feature-content">
                 <i class="material-icons feature-icon">schedule</i>
@@ -21,7 +21,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 q-mb-md">
             <div class="feature-card text-center">
               <div class="feature-content">
                 <i class="material-icons feature-icon">verified</i>
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 q-mb-md">
             <div class="feature-card text-center">
               <div class="feature-content">
                 <i class="material-icons feature-icon">verified_user</i>
