@@ -1,12 +1,21 @@
 <template>
   <section 
-    class="hero-section flex flex-center column" 
-    :style="{ backgroundImage: backgroundImage, flex: '1', minHeight: height, color: 'var(--white)', position: 'relative' }"
+    class="hero-section flex flex-center column " 
+    :style="{ 
+      backgroundImage: backgroundImage, 
+      flex: '1', 
+      minHeight: height, 
+      color: 'var(--white)', 
+      position: 'relative',
+      maxWidth: maxWidth,
+      margin: '2rem auto',
+      width: 'calc(100% - 3rem)'
+    }"
   >
     <div class="hero-overlay"></div>
-    <div class="full-width q-py-xl" style="position: relative; z-index: 2;">
+    <div class="full-width q-py-xl "  style="position: relative; z-index: 2;">
       <div class="container">
-        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+        <div class="text-center">
           <h1 class="hero-title q-mb-md">
             {{ title }}
           </h1>
@@ -40,10 +49,12 @@ interface Props {
   backgroundImage: string
   buttonText?: string
   height?: string
+  maxWidth?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  height: '60vh'
+  height: '60vh',
+  maxWidth: '1600px'
 })
 defineEmits<{
   buttonClick: []
@@ -57,7 +68,6 @@ defineEmits<{
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 1.5rem;
-  margin: 2rem 1.5rem;
   overflow: hidden;
 }
 
@@ -67,7 +77,7 @@ defineEmits<{
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 32, 44, 0.425) 0%, rgba(45, 55, 72, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(26, 32, 44, 0.411) 0%, rgba(45, 55, 72, 0.7) 100%);
   z-index: 1;
 }
 

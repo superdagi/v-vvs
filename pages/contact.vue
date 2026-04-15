@@ -4,27 +4,12 @@
     <HeroSection
       title="Ta kontakt med oss i dag!"
       subtitle="Ring oss i dag for personlig oppfølging og lokal tilstedeværelse. Vi tilbyr rørleggertjenester til både private og næringskunder. Vesterålen VVS har 200 års erfaring og vi ønsker å være din foretrukne rørlegger."
-      :background-image="`url('${pipesImage}')`"
+      :background-image="`url('${heroImage}')`"
       height="40vh"
+      buttonText="Ring oss"
+      @button-click="callMe"
     >
-      <template #actions>
-        <div class="hero-actions">
-          <a
-            href="tel:+4790171850"
-            class="hero-btn primary"
-          >
-            <i class="material-icons">phone</i>
-            Ring oss nå
-          </a>
-          <a
-            href="mailto:frank@larsenvvs.no"
-            class="hero-btn secondary"
-          >
-            <i class="material-icons">email</i>
-            Send e-post
-          </a>
-        </div>
-      </template>
+   
     </HeroSection>
 
     <!-- Contact Information Section -->
@@ -111,7 +96,7 @@
 import { useSeoMeta } from 'nuxt/app'
 import { useQuasar } from 'quasar'
 import { ref } from 'vue'
-import pipesImage from '~/assets/pipes.jpg';
+import heroImage from '~/assets/pipes.jpg';
 
 // SEO
 useSeoMeta({
@@ -143,6 +128,14 @@ const serviceOptions = [
   'Vedlikeholdskontrakt',
   'Annet'
 ]
+
+const callMe = () => {
+  window.location.href = 'tel:+4790171850';
+}
+
+const sendEmail = () => {
+  window.location.href = 'mailto:post@v-vvs.no';
+}
 
 const submitting = ref(false)
 

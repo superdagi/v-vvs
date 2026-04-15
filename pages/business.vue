@@ -5,7 +5,7 @@
       title="Profesjonelle VVS-løsninger"
       subtitle="Med over 20 års erfaring tilbyr vi pålitelige og effektive VVS-løsninger for både bolig- og næringseiendommer."
       :background-image="`url('${heroImage}')`"
-      height="50vh"
+      height="40vh"
     />
 
     <!-- Features Section -->
@@ -238,7 +238,7 @@
 <script setup lang="ts">
 import { useSeoMeta } from 'nuxt/app'
 import { ref } from 'vue'
-import heroImage from '~/assets/plumbing-repair-service_181624-27146.avif';
+import heroImage from '~/assets/1367981681-2048x2048.jpg';
 
 // SEO - useSeoMeta is auto-imported in Nuxt 3.7+
 useSeoMeta({

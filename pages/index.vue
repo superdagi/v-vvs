@@ -4,9 +4,9 @@
     <HeroSection
       title="Velkommen til Vesterålen VVS"
       subtitle="Din pålitelige partner for profesjonelle VVS-løsninger"
-      button-text="Se våre tjenester"
       :background-image="`url('${fixWcImage}')`"
-        height="50vh"
+      height="50vh"
+      buttonText="Se våre tjenester"
       @button-click="goToBusiness"
     />
 

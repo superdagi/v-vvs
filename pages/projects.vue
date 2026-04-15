@@ -5,7 +5,7 @@
       title="Våre prosjekter"
       subtitle="Fra små reparasjoner til store installasjoner - se hvordan vi har hjulpet våre kunder med profesjonelle VVS-løsninger gjennom årene."
       :background-image="`url('${projectsHeroImage}')`"
-      height="45vh"
+      height="40vh"
     />
 
     <!-- Filter Section -->
@@ -87,7 +87,7 @@
 <script setup lang="ts">
 import { useSeoMeta } from 'nuxt/app'
 import { ref, computed } from 'vue'
-import projectsHeroImage from '~/assets/Premier-Plumbing-7.png';
+import projectsHeroImage from '~/assets/industri.jpg';
 
 // SEO
 useSeoMeta({
