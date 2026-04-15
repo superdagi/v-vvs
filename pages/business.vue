@@ -10,8 +10,8 @@
 
     <!-- Features Section -->
     <section class="q-py-xl bg-grey-2">
-      <q-container>
-        <div class="row justify-center q-gutter-md">
+      <div class="constrained-container">
+        <div class="row justify-center q-col-gutter-md">
           <div class="col-12 col-md-3">
             <q-card class="full-height text-center q-pa-lg shadow-2 transition-hover">
               <q-card-section>
@@ -40,12 +40,12 @@
             </q-card>
           </div>
         </div>
-      </q-container>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="q-py-xl">
-      <q-container>
+      <div class="constrained-container">
         <div class="text-center q-mb-xl">
           <h2 class="text-h3 text-weight-medium q-mb-md">Våre tjenester</h2>
           <p class="text-h6 text-grey-7">
@@ -53,33 +53,33 @@
           </p>
         </div>
         
-        <div class="row q-gutter-md">
-          <div class="col-12 col-sm-6 col-lg-4" v-for="service in services" :key="service.id">
-            <q-card class="full-height shadow-3 transition-hover">
+        <div class="row q-col-gutter-lg">
+          <div class="col-12 col-sm-6 col-lg-4 q-mb-md" v-for="service in services" :key="service.id">
+            <q-card class="full-height shadow-2 transition-hover">
               <q-img
                 :src="service.image"
                 :alt="service.title"
-                height="160px"
-                class="rounded-borders-top"
+                height="200px"
+                fit="cover"
               />
-              <q-card-section class="q-pa-lg">
-                <div class="text-h6 q-mb-sm">{{ service.title }}</div>
-                <p class="text-body2 text-grey-7 line-height-md">{{ service.description }}</p>
+              <q-card-section class="q-pa-lg text-center">
+                <div class="text-h6 q-mb-md text-weight-medium">{{ service.title }}</div>
+                <p class="text-body2 text-grey-7">{{ service.description }}</p>
               </q-card-section>
             </q-card>
           </div>
         </div>
-      </q-container>
+      </div>
     </section>
 
     <!-- About Section -->
     <section class="q-py-xl bg-grey-2">
-      <q-container>
-        <div class="row items-center q-gutter-lg">
+      <div class="constrained-container">
+        <div class="row items-center justify-center q-col-gutter-xl">
           <div class="col-12 col-md-6">
-            <div class="q-pr-md">
-              <h2 class="text-h3 text-weight-medium q-mb-md">Om Vesterålen VVS</h2>
-              <p class="text-body1 text-grey-7 line-height-lg q-mb-lg">
+            <div class="text-center">
+              <h2 class="text-h3 text-weight-light q-mb-lg">Om Vesterålen VVS</h2>
+              <p class="text-h6 text-grey-6 text-weight-light q-mb-xl">
                 Etablert i 2026, har Vesterålen VVS som mål å betjene lokalsamfunnet med 
                 profesjonelle rørleggertjenester. Vårt team 
                 av sertifiserte eksperter er forpliktet til å levere løsninger av høy kvalitet 
@@ -109,7 +109,7 @@
             />
           </div>
         </div>
-      </q-container>
+      </div>
     </section>
 
   </div>
@@ -175,6 +175,20 @@ const services = ref([
 /* Minimal custom styles - most styling is handled by Quasar classes */
 .business-page {
   min-height: 100vh;
+}
+
+.constrained-container {
+  max-width: 1300px;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .constrained-container {
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+  }
 }
 
 .transition-hover {

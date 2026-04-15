@@ -1,6 +1,23 @@
-import { Quasar, Notify, Dialog, Loading, QBtn, QIcon, QMenu, QList, QItem, QItemSection, ClosePopup } from 'quasar'
+import { 
+  Quasar, 
+  Notify, 
+  Dialog, 
+  Loading, 
+  QBtn, 
+  QIcon, 
+  QMenu, 
+  QList, 
+  QItem, 
+  QItemSection,
+  QCard,
+  QCardSection,
+  QImg,
+  QChip,
+  QSeparator,
+  QBtnToggle,
+  ClosePopup 
+} from 'quasar'
 import iconSet from 'quasar/icon-set/material-icons'
-import '@quasar/extras/material-icons/material-icons.css'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(Quasar, {
@@ -18,7 +35,13 @@ export default defineNuxtPlugin((nuxtApp) => {
       QMenu,
       QList,
       QItem,
-      QItemSection
+      QItemSection,
+      QCard,
+      QCardSection,
+      QImg,
+      QChip,
+      QSeparator,
+      QBtnToggle
     },
     iconSet: iconSet,
     config: {
